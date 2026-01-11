@@ -78,7 +78,6 @@ function close() {
 }
 
 const project = props.project || {}
-const skillsApplied = project.skillsApplied || project.scope?.skillsApplied || project.skills || []
 
 const highlightItems = project.highlights || Array.from({ length: 5 }, (_, i) => ({
     title: `Detail ${i + 1}`,
