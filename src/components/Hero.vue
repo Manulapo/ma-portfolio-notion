@@ -1,5 +1,5 @@
 <template>
-    <section class="min-h-[90vh] w-full flex items-center pt-24 pb-8">
+    <Section :contained="false" customClass="min-h-[90vh] w-full flex items-center pt-24 pb-8">
         <div class="container mx-auto px-6 md:px-8 lg:px-16 w-7xl">
             <div class="flex flex-col-reverse md:flex-row items-center gap-8">
                 <div class="w-full md:w-[70%]">
@@ -30,17 +30,18 @@
 
                     <img src="/doodles/bulb-doodle.svg" alt="bulb"
                         class=" absolute left-5 top-30 w-18 -translate-x-6 -translate-y-6" />
-                    <img src="/doodles/shine-doodle.svg" alt="shine" class="absolute right-[-40px] top-70 w-16" />
+                    <img src="/doodles/shine-doodle.svg" alt="shine" class="absolute -right-10 top-70 w-16" />
                 </div>
             </div>
         </div>
-    </section>
+    </Section>
 </template>
 
 <script setup lang="ts">
 // purely presentational component
 import Header from './Header.vue'
 import Underline from './Underline.vue'
+import Section from './Section.vue'
 </script>
 
 <style scoped>

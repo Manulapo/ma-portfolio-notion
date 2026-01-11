@@ -1,10 +1,15 @@
 @import "tailwindcss";
 
 html,
-body,
-#app {
+body {
     font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    background: var(--bg);
+    background-color: var(--bg);
+}
+
+#app {
+    background-color: transparent;
+    position: relative;
+    z-index: 1;
 }
 
 :root {
@@ -14,7 +19,10 @@ body,
 
 /* Theme variables (light by default) */
 :root {
-    --bg: #FAFAFA;
+    --bg: #fafafa;
+    --bg-image: url('/images/doodle-bg.jpg');
+    --bg-rotation: -10deg;
+    --bg-opacity: 0.04;
     --text: #111827;
     --muted: #6b7280;
     --nav-bg: rgba(255, 255, 255, 0.7);
@@ -34,6 +42,23 @@ body {
     background: var(--bg);
     color: var(--text);
     transition: background .25s ease, color .25s ease;
+}
+
+/* Background image rendered via pseudo-element so we can control opacity */
+body::before {
+    content: "";
+    position: fixed;
+    inset: -50%;
+    background-image: var(--bg-image);
+    background-repeat: repeat;
+    background-size: var(--bg-size);
+    background-position: center;
+    opacity: var(--bg-opacity);
+    pointer-events: none;
+    transform-origin: center;
+    transform: rotate(var(--bg-rotation));
+    z-index: 0;
+    mix-blend-mode: multiply;
 }
 
 /* Override common Tailwind background utility classes when in dark mode */
@@ -60,4 +85,10 @@ body {
 .theme-dark .card-surface {
     background-color: #0b0b0f;
     color: var(--text);
+}
+
+/* Light theme: make white surfaces slightly translucent so background images show through */
+.bg-white {
+    background-color: #ffffffe6 !important;
+    backdrop-filter: blur(4px);
 }
