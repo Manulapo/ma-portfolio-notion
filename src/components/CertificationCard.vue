@@ -46,5 +46,4 @@ const props = defineProps({
     issuedBy: { type: String, required: false, default: '' }
 })
 
-console.log(props);
 </script>

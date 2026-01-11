@@ -1,8 +1,8 @@
-import excelIconBW from "/assets/icons/bw/excel-icon.png";
-import tableauIconBW from "/assets/icons/bw/tableau-icon.png";
-import excelIcon from "/assets/icons/excel-icon.png";
-import powerpointIcon from "/assets/icons/power-point-icon.png";
-import tableauIcon from "/assets/icons/tableau-icon.png";
+import excelIconBW from "/icons/bw/excel-icon.png";
+import tableauIconBW from "/icons/bw/tableau-icon.png";
+import excelIcon from "/icons/excel-icon.png";
+import powerpointIcon from "/icons/power-point-icon.png";
+import tableauIcon from "/icons/tableau-icon.png";
 
 
 

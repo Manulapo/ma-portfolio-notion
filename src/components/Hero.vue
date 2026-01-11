@@ -1,6 +1,6 @@
 <template>
     <Section :contained="false" custom-class="mt-16">
-        <div class=" container mx-auto px-6 md:px-8 lg:px-16 w-7xl">
+        <div class=" container mx-auto pt-32 px-6 md:px-8 lg:px-16 w-7xl">
             <div class="flex flex-col-reverse md:flex-row items-center gap-8">
                 <div class="w-full md:w-[70%]">
                     <p class="text-4xl text-gray-700 mb-2">Hi, I'm <span class="italic font-semibold">Chiara</span>, and
@@ -11,24 +11,24 @@
                         </span>
                     </h1>
 
-                    <p class="text-4xl mb-6 2 w-6xl">aiming to understand <Underline size="xl">
+                    <p class="text-4xl mb-18 2 w-6xl">aiming to understand <Underline size="xl">
                             <span class="italic font-bold">customers needs</span>
                         </Underline>
                     </p>
 
                     <div class="flex items-center gap-4 flex-wrap">
-                        <a href="/assets/404.html"
+                        <a href="/downloads/Chiara_Alessandroni_CV.pdf" download
                             class="inline-flex items-center gap-3 bg-black/70 backdrop-blur-sm text-white px-16 py-4 rounded-full hover:bg-black/90 shadow-md transition ease-in-out">
                             <i class="fa-solid fa-file" aria-hidden="true"></i>
                             My CV
                         </a>
                         <a class="inline-flex items-center justify-center h-12 w-12 text-black rounded-md cursor-pointer"
-                            aria-label="linkedin">
+                            aria-label="linkedin" :href="links.linkedin" target="_blank" rel="noopener">
                             <i class="fa-brands fa-linkedin text-2xl" aria-hidden="true"></i>
                         </a>
 
                         <a class="inline-flex items-center justify-center h-12 w-12 text-black rounded-md cursor-pointer"
-                            aria-label="other">
+                            aria-label="other" :href="links.vizzy" target="_blank" rel="noopener">
                             <img class="size-6" src="/icons/vizzy-icon.png" alt="">
                         </a>
                     </div>
@@ -54,10 +54,10 @@
 </template>
 
 <script setup lang="ts">
-// purely presentational component
 import Header from './Header.vue'
 import Underline from './Underline.vue'
 import Section from './Section.vue'
+import { links } from '../constants/links';
 </script>
 
 <style scoped>
