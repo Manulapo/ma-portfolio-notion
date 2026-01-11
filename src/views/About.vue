@@ -8,9 +8,9 @@
                         class="hidden md:block absolute -left-8 top-10 w-20 opacity-90" />
 
                     <div class="flex justify-center gap-10">
-                        <NumbersBox number="3.5" text="Years of experience" />
-                        <NumbersBox number="11" text="Certifications gained" />
-                        <NumbersBox number="3" text="Portfolio projects" />
+                        <NumbersBox :number="getYears(2023)" text="Years of experience" />
+                        <NumbersBox :number="certifications.length" text="Certifications gained" />
+                        <NumbersBox :number="projects.length" text="Portfolio projects" />
                     </div>
 
                     <img src="/doodles/squiggly-arrow-doodle.svg" alt="arrow"
@@ -41,4 +41,7 @@
 import InfoBadge from '../components/InfoBadge.vue'
 import NumbersBox from '../components/NumbersBox.vue'
 import Section from '../components/Section.vue'
+import { getYears } from '../composables/utils';
+import { certifications } from '../constants/certifications';
+import { projects } from '../constants/projects';
 </script>

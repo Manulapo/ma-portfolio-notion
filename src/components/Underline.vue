@@ -1,7 +1,8 @@
 <template>
     <span class="underline-doodle" :style="styleObject">
         <slot />
-        <img src="/doodles/underline-doodle.svg" alt="underline" class="doodle" aria-hidden="true" />
+        <img src="/doodles/underline-doodle.svg" alt="underline" :class="['doodle', ...customClass]"
+            aria-hidden="true" />
     </span>
 </template>
 
@@ -13,6 +14,10 @@ const props = defineProps({
         type: String,
         default: 'm',
         validator: (v: string) => ['s', 'm', 'l', 'xl'].includes(v)
+    },
+    customClass: {
+        type: String,
+        default: ''
     }
 })
 
@@ -47,7 +52,6 @@ const styleObject = computed(() => ({ fontSize: sizeValue.value, '--doodle-scale
     position: absolute;
     left: 0%;
     transform-origin: center;
-    bottom: -70%;
     pointer-events: none;
     z-index: 0;
 }

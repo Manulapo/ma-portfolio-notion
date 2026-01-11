@@ -1,8 +1,7 @@
-import excelIconBW from "/icons/bw/excel-icon.png";
-import powerBiIcon from "/icons/bw/powerbi-icon.png";
-import tableauIconBW from "/icons/bw/tableau-icon.png";
-import pythonIconBW from "/icons/bw/python-icon.png";
-import mySqlIconBW from "/icons/bw/mysql-icon.png";
+import { BWicons } from ".";
+
+
+const { mySqlIconBW, pythonIconBW, powerBiIconBW, excelIconBW, tableauIconBW, googleAnalyticsBW, metaAnalyticsBW, canvaIconBW } = BWicons;
 
 export const skills = [
     {
@@ -17,7 +16,7 @@ export const skills = [
     },
     {
         name: "Power BI",
-        img: powerBiIcon,
+        img: powerBiIconBW,
         text: "Create interactive dashboards and KPI reports for campaign performance, funnels and executive reporting."
     },
     {
@@ -30,5 +29,20 @@ export const skills = [
         img: tableauIconBW,
         text: "Build rich visualizations and blended data dashboards to explore audience behavior and marketing ROI."
     },
+    {
+        name: "Google Analytics 4",
+        img: googleAnalyticsBW,
+        text: "Analyze website traffic, user behavior, and conversion funnels to optimize digital marketing strategies."
+    },
+    {
+        name: "Meta Analytics",
+        img: metaAnalyticsBW,
+        text: "Leverage Meta Ads Manager for campaign tracking, audience insights, and performance optimization."
+    },
+    {
+        name: "Canva",
+        img: canvaIconBW,
+        text: "Design engaging marketing materials, social media graphics, and presentations to enhance brand communication."
+    }
 
 ];

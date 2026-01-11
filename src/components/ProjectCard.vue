@@ -1,5 +1,6 @@
 <template>
-    <article class="bg-white rounded-sm shadow-sm p-4 border border-gray-50">
+    <article @click="handleOpen" role="button" tabindex="0"
+        class="bg-white rounded-sm shadow-sm p-4 border border-gray-50 cursor-pointer hover:shadow-md transition-shadow">
         <div v-if="project.previewImage" :style="{ backgroundImage: `url(${project.previewImage})` }"
             class="bg-cover bg-center rounded-md h-44 md:h-52"></div>
         <div v-else class="bg-gray-100 rounded-lg h-44 md:h-52"></div>
@@ -14,35 +15,34 @@
         </div>
 
         <div class="mt-4 flex items-center justify-end">
-            <i
-                class="fas fa-arrow-right ml-1 text-gray-600 cursor-pointer hover:text-black transition-all ease-in-out"></i>
+            <button @click.stop="handleOpen" aria-label="Open project"
+                class="ml-1 text-gray-600 hover:text-black transition-all ease-in-out">
+                <i class="fas fa-arrow-right"></i>
+            </button>
         </div>
     </article>
 </template>
 
 <script setup lang="ts">
 
-type Attachment = { type?: { name?: string }, link: string }
 
 const props = defineProps({
     project: { type: Object as () => any, required: true }
 })
 
-const { project } = props as {
-    project: {
-        title: string,
-        description?: string,
-        previewImage?: string,
-        tags?: string[],
-        relevantLink?: string,
-        attachments?: Attachment[]
-    }
+const emit = defineEmits<{ (e: 'open', project: any): void }>()
+
+
+function handleOpen() {
+    emit('open', props.project)
 }
+
 </script>
 
 <style scoped>
 .multi-line-truncate {
     display: -webkit-box;
+    line-clamp: 3;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;

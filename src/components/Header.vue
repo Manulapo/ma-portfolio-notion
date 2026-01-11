@@ -17,6 +17,10 @@ const props = defineProps({
         type: String,
         default: '',
         validator: (v: string) => v === '' || ['s', 'm', 'l', 'xl'].includes(v)
+    },
+    random: {
+        type: Boolean,
+        default: false
     }
 })
 
@@ -30,13 +34,19 @@ const colorMap: Record<string, string> = {
 }
 
 const sizeMap: Record<string, string> = {
-    s: '1rem',
+    s: '1.05rem',
     m: '2rem',
     l: '3.5rem',
     xl: '5rem'
 }
 
-const color = computed(() => colorMap[props.highlighted])
+const color = computed(() => {
+    if (props.random) {
+        const colors = Object.values(colorMap)
+        return colors[Math.floor(Math.random() * colors.length)]
+    }
+    return colorMap[props.highlighted] || 'transparent'
+})
 const sizeValue = computed(() => (props.size ? sizeMap[props.size] : undefined))
 
 const styleObject = computed(() => {
@@ -53,6 +63,7 @@ const styleObject = computed(() => {
     z-index: 1;
     padding: 0.2rem 0.6rem;
     border-radius: 0.25rem;
+    white-space: nowrap;
 }
 
 .header::after {

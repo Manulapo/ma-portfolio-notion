@@ -11,7 +11,7 @@
                 <div class="flex-1">
                     <div class="flex justify-center flex-col items-center text-center gap-1">
                         <span class="text-sm text-gray-500">{{ issuedBy }}</span>
-                        <h3 class="text-gray-800 font-semibold text-lg">{{ name }}</h3>
+                        <h3 class="text-gray-800 font-semibold text-lg leading-tight">{{ name }}</h3>
                     </div>
                 </div>
             </div>
@@ -24,12 +24,12 @@
 
         <div class="flex items-center m-4">
             <span
-                class=" absolute left-3 bottom-3 text-sm text-gray-400 transition-opacity duration-200 ease-in-out group-hover:opacity-0 group-hover:invisible">{{
-                    date }}
+                class=" absolute left-3 bottom-3 text-sm text-gray-400 transition-opacity duration-200 ease-in-out group-hover:opacity-0 group-hover:invisible">
+                {{ date }}
             </span>
             <a v-if="link" :href="link" target="_blank" rel="noreferrer"
-                class="absolute right-3 bottom-3 text-gray-500 hover:text-blue-600 z-20">
-                <i class="fas fa-file-pdf fa-lg"></i>
+                class="absolute right-3 top-3 text-gray-500 hover:text-blue-600 z-20">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </a>
         </div>
 

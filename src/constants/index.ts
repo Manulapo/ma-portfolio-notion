@@ -1,10 +1,25 @@
 import excelIconBW from "/icons/bw/excel-icon.png";
+import mySqlIconBW from "/icons/bw/mysql-icon.png";
+import powerBiIconBW from "/icons/bw/powerbi-icon.png";
+import pythonIconBW from "/icons/bw/python-icon.png";
 import tableauIconBW from "/icons/bw/tableau-icon.png";
 import excelIcon from "/icons/excel-icon.png";
 import powerpointIcon from "/icons/power-point-icon.png";
 import tableauIcon from "/icons/tableau-icon.png";
+import googleAnalyticsBW from "/icons/bw/ga-icon.png";
+import metaAnalyticsBW from "/icons/bw/meta-analytics-icon.png";
+import canvaIconBW from "/icons/bw/canva-icon.png";
 
-
+export const BWicons = {
+  excelIconBW,
+  tableauIconBW,
+  powerBiIconBW,
+  pythonIconBW,
+  mySqlIconBW,
+  googleAnalyticsBW,
+  metaAnalyticsBW,
+  canvaIconBW,
+}
 
 export const attachmentSIcon = {
   pdf: {
@@ -17,7 +32,7 @@ export const attachmentSIcon = {
   },
   powerBiDS: {
     name: "Go to Dashboard",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+    icon: powerBiIconBW,
   },
   tableauDS: {
     name: "Go to Dashboard",
@@ -29,7 +44,7 @@ export const attachmentSIcon = {
   },
   mySql: {
     name: "MySQL",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+    icon: mySqlIconBW,
   },
 };
 
@@ -59,28 +74,3 @@ export const toolsUsedIcon = {
     icon: powerpointIcon,
   },
 };
-
-
-// export const skillsObj: Record<string, ToolsUsedInterface[]> = {
-//   Data_Analysis: [
-//     {
-//       name: "MySQL",
-//       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
-//     },
-//     {
-//       name: "Python",
-//       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
-//     },
-//     { name: "Excel", icon: excelIcon },
-//   ],
-//   Data_Visualization: [
-//     {
-//       name: "Tableau",
-//       icon: tableauIcon,
-//     },
-//     {
-//       name: "Power BI",
-//       icon: powerBiIcon,
-//     },
-//   ],
-// };

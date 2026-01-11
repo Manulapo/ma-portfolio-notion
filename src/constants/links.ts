@@ -1,6 +1,5 @@
 import linkedinIcon from "/icons/linkedin.png";
 import denmarkFlag from "/icons/DK.png";
-import legoBrick from "/icons/lego_brick.png";
 
 const resumePDF = `${window.location.origin}/files/PDF/resumee/Chiara_Coletta_resumee.pdf`;
 const dataAnalyticsPDF = `${window.location.origin}/files/PDF/certifications/Coursera Data Analytics certification.pdf`;
@@ -42,5 +41,4 @@ export const images = {
   avatar,
   linkedinIcon,
   denmarkFlag,
-  legoBrick
 }

@@ -17,10 +17,10 @@
                     </p>
 
                     <div class="flex items-center gap-4 flex-wrap">
-                        <a href="/downloads/Chiara_Alessandroni_CV.pdf" download
+                        <a :href="links.resumePDF" download
                             class="inline-flex items-center gap-3 bg-black/70 backdrop-blur-sm text-white px-16 py-4 rounded-full hover:bg-black/90 shadow-md transition ease-in-out">
-                            <i class="fa-solid fa-file" aria-hidden="true"></i>
-                            My CV
+                            <i class="fa-solid fa-file-download" aria-hidden="true"></i>
+                            My Resume
                         </a>
                         <a class="inline-flex items-center justify-center h-12 w-12 text-black rounded-md cursor-pointer"
                             aria-label="linkedin" :href="links.linkedin" target="_blank" rel="noopener">

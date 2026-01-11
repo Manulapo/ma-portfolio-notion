@@ -1,7 +1,7 @@
 <template>
     <nav class="fixed inset-x-0 top-12 flex justify-center z-50 pointer-events-auto">
         <div
-            class="w-full max-w-[1150px] mx-5 bg-black/70 backdrop-blur-sm rounded-[40px] px-6 md:px-10 py-5 shadow-xl flex items-center gap-4 hover:bg-black/90 transition ease-in-out">
+            class="w-full max-w-278.5 mx-5 bg-black/70 backdrop-blur-sm rounded-[40px] px-6 md:px-10 py-5 shadow-xl flex items-center gap-4 hover:bg-black/80 transition ease-in-out">
             <a href="#" class="flex items-center flex-none" aria-label="home">
                 <img src="/images/logo.png" alt="logo" class="w-20 h-auto block" />
             </a>
@@ -16,10 +16,17 @@
             </ul>
 
             <div class="ml-auto flex items-center gap-2 md:gap-3">
+                <a class="inline-flex items-center justify-center text-white rounded-md cursor-pointer"
+                    aria-label="linkedin" :href="links.linkedin" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-linkedin text-xl" aria-hidden="true"></i>
+                </a>
+
                 <button class="text-white p-2 rounded-md hover:bg-white/5" aria-label="theme" @click="toggleTheme"
                     :aria-pressed="isDark">
                     <i :class="isDark ? 'fa-solid fa-moon' : 'fa-solid fa-sun'" aria-hidden="true"></i>
                 </button>
+
+
 
                 <!-- mobile menu button -->
                 <button class="md:hidden text-white p-2 rounded-md hover:bg-white/5" aria-label="menu"
@@ -49,7 +56,6 @@
                     <li><a class="text-white font-medium" href="#skills" @click="mobileOpen = false">Skills</a></li>
                     <li><a class="text-white font-medium" href="#certifications"
                             @click="mobileOpen = false">Certifications</a></li>
-                    <li><a class="text-white font-medium" href="#" @click="mobileOpen = false">CV</a></li>
                 </ul>
             </div>
         </transition>
@@ -59,6 +65,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useTheme } from '../composables/useTheme'
+import { links } from '../constants/links';
 
 const { isDark, toggleTheme } = useTheme()
 const mobileOpen = ref(false)
