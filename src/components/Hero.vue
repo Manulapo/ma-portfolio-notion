@@ -1,6 +1,6 @@
 <template>
-    <Section :contained="false" customClass="min-h-[90vh] w-full flex items-center pt-24 pb-8">
-        <div class="container mx-auto px-6 md:px-8 lg:px-16 w-7xl">
+    <Section :contained="false" custom-class="mt-16">
+        <div class=" container mx-auto px-6 md:px-8 lg:px-16 w-7xl">
             <div class="flex flex-col-reverse md:flex-row items-center gap-8">
                 <div class="w-full md:w-[70%]">
                     <p class="text-4xl text-gray-700 mb-2">Hi, I'm <span class="italic font-semibold">Chiara</span>, and
@@ -16,22 +16,38 @@
                         </Underline>
                     </p>
 
-                    <a href="/assets/404.html"
-                        class="inline-flex items-center gap-3 bg-black text-white px-16 py-4 rounded-full mt-8">
-                        <i class="fa-solid fa-file" aria-hidden="true"></i>
-                        My CV
-                    </a>
+                    <div class="flex items-center gap-4 flex-wrap">
+                        <a href="/assets/404.html"
+                            class="inline-flex items-center gap-3 bg-black/70 backdrop-blur-sm text-white px-16 py-4 rounded-full hover:bg-black/90 shadow-md transition ease-in-out">
+                            <i class="fa-solid fa-file" aria-hidden="true"></i>
+                            My CV
+                        </a>
+                        <a class="inline-flex items-center justify-center h-12 w-12 text-black rounded-md cursor-pointer"
+                            aria-label="linkedin">
+                            <i class="fa-brands fa-linkedin text-2xl" aria-hidden="true"></i>
+                        </a>
+
+                        <a class="inline-flex items-center justify-center h-12 w-12 text-black rounded-md cursor-pointer"
+                            aria-label="other">
+                            <img class="size-6" src="/icons/vizzy-icon.png" alt="">
+                        </a>
+                    </div>
+
                 </div>
 
                 <div class="w-full md:w-[50%] relative flex justify-center md:justify-end">
                     <div class="w-100 rounded-full overflow-hidden">
-                        <img src="/images/cc.png" alt="Chiara" class="w-full h-full" />
+                        <img src="/images/other/cc.png" alt="Chiara" class="w-full h-full" />
                     </div>
 
                     <img src="/doodles/bulb-doodle.svg" alt="bulb"
                         class=" absolute left-5 top-30 w-18 -translate-x-6 -translate-y-6" />
                     <img src="/doodles/shine-doodle.svg" alt="shine" class="absolute -right-10 top-70 w-16" />
                 </div>
+            </div>
+
+            <div class="w-full flex justify-center mt-16">
+                <i class="fas fa-chevron-down text-4xl cursor-pointer" />
             </div>
         </div>
     </Section>

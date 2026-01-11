@@ -34,11 +34,11 @@
             </div>
         </div>
     </Section>
+
 </template>
 
 <script setup lang="ts">
-import Section from '../components/Section.vue'
-import Header from '../components/Header.vue'
-import NumbersBox from '../components/NumbersBox.vue'
 import InfoBadge from '../components/InfoBadge.vue'
+import NumbersBox from '../components/NumbersBox.vue'
+import Section from '../components/Section.vue'
 </script>

@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-col items-center" ref="root">
         <div
-            class="bg-gray-900 text-white rounded-lg w-28 h-28 md:w-36 md:h-36 flex items-center justify-center text-3xl md:text-7xl font-extrabold ">
+            class="bg-gray-900 text-white rounded-lg w-fit h-28 md:w-36 md:h-36 flex items-center justify-center text-3xl md:text-7xl font-extrabold">
             {{ displayValue }}
         </div>
         <div class="mt-3 text-md text-gray-600">{{ text }}</div>

@@ -21,10 +21,10 @@ const props = defineProps({
 })
 
 const colorMap: Record<string, string> = {
-    pink: '#F9AEB6',
-    peach: '#FCE1C7',
+    pink: '#FFB3BA',
+    peach: '#FFDFBA',
     yellow: '#FEF9B0',
-    mint: '#CFFFD7',
+    mint: '#BAFFC9',
     blue: '#C6E6FF',
     lavender: '#EABFFF'
 }
@@ -60,7 +60,7 @@ const styleObject = computed(() => {
     position: absolute;
     top: 5px;
     left: 15px;
-    width: 90%;
+    width: 100%;
     height: 70%;
     background: var(--highlight);
     border-radius: inherit;
