@@ -15,5 +15,5 @@ export default defineConfig({
       ]
     })
   ],
-  base: '/vue-ts-tw-scaffold/'
+  base: process.env.NODE_ENV === 'production' ? '/ma-portfolio-notion/' : '/'
 })

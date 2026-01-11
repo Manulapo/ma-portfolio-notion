@@ -1,1 +1,63 @@
 @import "tailwindcss";
+
+html,
+body,
+#app {
+    font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: var(--bg);
+}
+
+:root {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Theme variables (light by default) */
+:root {
+    --bg: #FAFAFA;
+    --text: #111827;
+    --muted: #6b7280;
+    --nav-bg: rgba(255, 255, 255, 0.7);
+    --nav-text: #111827;
+}
+
+/* Dark theme overrides */
+.theme-dark {
+    --bg: #333;
+    --text: #f3f4f6;
+    --muted: #9ca3af;
+    --nav-bg: rgba(18, 18, 18, 0.75);
+    --nav-text: #ffffff;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    transition: background .25s ease, color .25s ease;
+}
+
+/* Override common Tailwind background utility classes when in dark mode */
+.theme-dark .bg-gray-100 {
+    background-color: var(--bg) !important;
+}
+
+.theme-dark .bg-white {
+    background-color: #0b0b0f !important;
+    color: var(--text) !important;
+}
+
+.theme-dark .bg-blue-50 {
+    background-color: #071426 !important;
+    color: var(--text) !important;
+}
+
+.theme-dark .bg-gray-800 {
+    background-color: #111827 !important;
+    color: var(--text) !important;
+}
+
+/* Ensure cards and panels use a slightly different surface if desired */
+.theme-dark .card-surface {
+    background-color: #0b0b0f;
+    color: var(--text);
+}
