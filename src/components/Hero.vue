@@ -11,8 +11,8 @@
                         </span>
                     </h1>
 
-                    <p class="text-4xl text-gray-600 mb-6 2 w-6xl">aiming to understand <Underline size="xl">
-                            <span class="italic">customers needs</span>
+                    <p class="text-4xl mb-6 2 w-6xl">aiming to understand <Underline size="xl">
+                            <span class="italic font-bold">customers needs</span>
                         </Underline>
                     </p>
 

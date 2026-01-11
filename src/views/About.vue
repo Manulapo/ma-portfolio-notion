@@ -1,38 +1,36 @@
 <template>
-    <Section>
-        <div class="max-w-2xl mx-auto">
-            <h2 class="text-3xl font-bold mb-6 text-center">About This Project</h2>
+    <Section id="about" contained :section-name="['About', 'me']" section-desc="Lorem ipsum dolor sit amet dolor sit Lorem ipsum dolor sit amet dolor sit Lorem ipsum dolor sit amet
+        dolor sit Lorem ipsum dolor sit" section-color="yellow">
+        <div class="relative">
+            <div class="max-w-5xl mx-auto">
+                <div class="relative py-12">
+                    <img src="/doodles/shapes-doodle.svg" alt="shapes"
+                        class="hidden md:block absolute -left-8 top-10 w-20 opacity-90" />
 
-            <div class="bg-white rounded-lg shadow-md p-6 mb-6">
-                <h3 class="text-xl font-semibold mb-3 flex items-center gap-2">
-                    <font-awesome-icon icon="user-secret" class="text-blue-600" />
-                    Tech Stack
-                </h3>
-                <ul class="space-y-2 text-gray-700">
-                    <li>✅ Vue 3 with Composition API</li>
-                    <li>✅ TypeScript for type safety</li>
-                    <li>✅ Tailwind CSS v4 for styling</li>
-                    <li>✅ Font Awesome icons</li>
-                    <li>✅ Vue Router for navigation</li>
-                    <li>✅ GitHub Pages ready</li>
-                </ul>
-            </div>
+                    <div class="flex justify-center gap-10">
+                        <NumbersBox number="3.5" text="Years of experience" />
+                        <NumbersBox number="11" text="Certifications gained" />
+                        <NumbersBox number="3" text="Portfolio projects" />
+                    </div>
 
-            <div class="bg-blue-50 rounded-lg p-6">
-                <h3 class="text-xl font-semibold mb-3 text-blue-900">Deployment</h3>
-                <p class="text-gray-700 mb-3">
-                    To deploy this project to GitHub Pages, run:
-                </p>
-                <code class="block bg-gray-800 text-green-400 p-3 rounded">
-            npm run deploy
-          </code>
-            </div>
+                    <img src="/doodles/squiggly-arrow-doodle.svg" alt="arrow"
+                        class="hidden md:block absolute -right-8 top-36 w-20 opacity-90" />
+                </div>
 
-            <div class="text-center mt-8">
-                <router-link to="/"
-                    class="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-                    ← Back to Home
-                </router-link>
+                <div class="flex flex-col md:flex-row items-start gap-8 mt-16">
+                    <p class="md:flex-1 text-gray-600 italic">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate alias sequi tempora enim!
+                        Veniam cumque natus et laborum cupiditate recusandae quos ea dolorum optio molestiae nobis sit
+                        placeat eaque laboriosam nesciunt, perferendis in. Sunt nostrum vero nobis laborum iste saepe
+                        quis, laboriosam et, temporibus quidem inventore aperiam perferendis quibusdam obcaecati aliquam
+                        qui corrupti est sed.
+                    </p>
+
+                    <div class="md:w-80 flex flex-col gap-4">
+                        <InfoBadge title="MSc in Something" subtitle="University Name" icon="fas fa-graduation-cap" />
+                        <InfoBadge title="BSc in Something" subtitle="College Name" icon="fas fa-graduation-cap" />
+                    </div>
+                </div>
             </div>
         </div>
     </Section>
@@ -40,4 +38,7 @@
 
 <script setup lang="ts">
 import Section from '../components/Section.vue'
+import Header from '../components/Header.vue'
+import NumbersBox from '../components/NumbersBox.vue'
+import InfoBadge from '../components/InfoBadge.vue'
 </script>
