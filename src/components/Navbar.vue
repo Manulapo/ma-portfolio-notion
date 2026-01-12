@@ -25,7 +25,7 @@
                     <i class="fa-brands fa-linkedin text-base sm:text-lg md:text-xl" aria-hidden="true"></i>
                 </a>
 
-                <button class="text-white p-1.5 sm:p-2 rounded-md hover:bg-white/10" aria-label="theme cursor-pointer"
+                <button class="text-white p-1.5 sm:p-2 rounded-md hover:bg-white/10 cursor-pointer" aria-label="theme"
                     @click="toggleTheme" :aria-pressed="isDark">
                     <i :class="isDark ? 'fa-solid fa-moon' : 'fa-solid fa-sun'" aria-hidden="true"></i>
                 </button>
