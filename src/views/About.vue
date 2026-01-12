@@ -1,5 +1,5 @@
 <template>
-    <Section id="about" contained :section-name="['About', 'me']" section-desc="Lorem ipsum dolor sit amet dolor sit Lorem ipsum dolor sit amet dolor sit Lorem ipsum dolor sit amet
+    <Section id="about" contained :section-name="['about', 'Me']" section-desc="Lorem ipsum dolor sit amet dolor sit Lorem ipsum dolor sit amet dolor sit Lorem ipsum dolor sit amet
         dolor sit Lorem ipsum dolor sit" section-color="yellow">
         <div class="relative">
             <div class="max-w-5xl mx-auto">
@@ -27,6 +27,7 @@
                     </p>
 
                     <div class="w-full md:w-80 flex flex-col justify-end items-end gap-2 sm:gap-3 md:gap-4">
+                        <InfoBadge title="Based in Denmark" subtitle="" image="/icons/DK.png" />
                         <InfoBadge title="MSc in Something" subtitle="University Name" icon="fas fa-graduation-cap" />
                         <InfoBadge title="BSc in Something" subtitle="College Name" icon="fas fa-graduation-cap" />
                     </div>

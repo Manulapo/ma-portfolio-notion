@@ -35,11 +35,9 @@ export function useTheme() {
                 applyClass(false)
                 return
             }
-            // fallback to system preference
-            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                isDark.value = true
-                applyClass(true)
-            }
+            // default to light theme when no saved preference
+            isDark.value = false
+            applyClass(false)
         } catch (e) {
             // ignore
         }

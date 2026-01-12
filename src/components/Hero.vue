@@ -24,7 +24,7 @@
                             class="inline-flex items-center gap-2 sm:gap-3 bg-black/90 backdrop-blur-sm text-white px-4 sm:px-8 md:px-16 md:py-4 text-sm sm:text-base rounded-full shadow-md transition ease-in-out w-[90%] py-4 sm:py-2 sm:w-auto justify-center">
                             <i class="fa-solid fa-file-download" aria-hidden="true"></i>
                             <span class="hidden sm:inline">My Resume</span>
-                            <span class="sm:hidden">Resume</span>
+                            <span class="sm:hidden">My resume</span>
                         </a>
                         <a class="hidden sm:inline-flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12 text-black rounded-md cursor-pointer"
                             aria-label="linkedin" :href="links.linkedin" target="_blank" rel="noopener">
