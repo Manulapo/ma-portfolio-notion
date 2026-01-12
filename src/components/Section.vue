@@ -7,7 +7,7 @@
                     <Header :highlighted="sectionColor">
                         <span class="font-extrabold">{{ sectionName[1] }}</span>
                     </Header>
-                    <img v-if="sectionDoodle" :src="sectionDoodle" alt="doodle"
+                    <img v-if="sectionDoodle" :src="resolveDoodle(sectionDoodle)" alt="doodle"
                         :class="['inline-block', doodleSize ? doodleSize : 'w-12 h-12', 'align-middle', 'z-10', 'absolute', '-right-15']" />
                 </h2>
             </header>
@@ -35,6 +35,16 @@ const props = defineProps({
 })
 
 const { id, contained, customClass } = props
+
+// Resolve public asset paths according to Vite base
+const baseUrl = import.meta.env.BASE_URL ?? '/'
+const resolveDoodle = (p?: string) => {
+    if (!p) return ''
+    if (p.startsWith('http') || p.startsWith('//')) return p
+    if (baseUrl === './') return `./${p.replace(/^\//, '')}`
+    const b = baseUrl.endsWith('/') ? baseUrl.slice(0, -1) : baseUrl
+    return p.startsWith('/') ? `${b}${p}` : `${b}/${p}`
+}
 </script>
 
 <style scoped>
