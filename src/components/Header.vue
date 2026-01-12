@@ -92,6 +92,7 @@ const styleObject = computed(() => {
     border-radius: inherit;
     z-index: -1;
     transform: rotate(-1deg);
+    opacity: .8;
 }
 
 @media (min-width: 640px) {
