@@ -1,6 +1,6 @@
 <template>
     <div
-        :class="['bg-[#fafafa] rounded-lg p-2 sm:p-3 md:p-4 min-h-40 sm:min-h-44 md:min-h-48 flex flex-col relative', variantClass]">
+        :class="['bg-[#fafafa] rounded-lg p-4 sm:p-3 md:p-4 h-fit sm:min-h-44 md:min-h-48 flex flex-col relative', variantClass]">
         <h3 class="text-sm sm:text-base md:text-lg font-semibold text-gray-800 mb-1 sm:mb-2 flex items-center">
             <slot name="title">
                 <Header random size="s">{{ title }}</Header>
