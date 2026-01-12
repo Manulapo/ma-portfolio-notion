@@ -5,6 +5,7 @@ body {
     font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     background-color: var(--bg);
     scroll-behavior: smooth !important;
+    font-size: clamp(14px, 2.5vw, 16px);
 }
 
 #app {

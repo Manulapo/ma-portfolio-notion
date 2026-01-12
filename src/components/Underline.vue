@@ -15,30 +15,46 @@ const props = defineProps({
         default: 'm',
         validator: (v: string) => ['s', 'm', 'l', 'xl'].includes(v)
     },
-    customClass: {
+    mobileSize: {
         type: String,
+        default: '',
+        validator: (v: string) => v === '' || ['s', 'm', 'l', 'xl'].includes(v)
+    },
+    customClass: {
+        // allow either a string or array of classes
+        type: [String, Array],
         default: ''
     }
 })
 
 const sizeMap: Record<string, string> = {
-    s: '1rem',
-    m: '1.25rem',
-    l: '1.75rem',
-    xl: '2.25rem'
+    s: '0.9rem',
+    m: '1rem',
+    l: '1.15rem',
+    xl: '2rem'
 }
 
 const scaleMap: Record<string, number> = {
-    s: 0.75,
+    s: 0.8,
     m: 0.95,
     l: 1,
-    xl: 1.15
+    xl: 1.05
 }
 
 const sizeValue = computed(() => sizeMap[props.size] || sizeMap.m)
 const scaleValue = computed(() => String(scaleMap[props.size] || 1))
+const mobileSizeValue = computed(() => props.mobileSize ? sizeMap[props.mobileSize] : sizeValue.value)
+const mobileScaleValue = computed(() => props.mobileSize ? String(scaleMap[props.mobileSize] || 1) : scaleValue.value)
 
-const styleObject = computed(() => ({ fontSize: sizeValue.value, '--doodle-scale': scaleValue.value }))
+const styleObject = computed(() => {
+    const result: any = {
+        '--mobile-font-size': mobileSizeValue.value,
+        '--desktop-font-size': sizeValue.value,
+        '--mobile-doodle-scale': mobileScaleValue.value,
+        '--doodle-scale': scaleValue.value
+    }
+    return result
+})
 </script>
 
 <style scoped>
@@ -46,13 +62,29 @@ const styleObject = computed(() => ({ fontSize: sizeValue.value, '--doodle-scale
     position: relative;
     display: inline-block;
     z-index: 1;
+    padding-bottom: 0.15em;
+    font-size: var(--mobile-font-size, inherit);
 }
 
 .doodle {
     position: absolute;
-    left: 0%;
+    left: 0;
+    bottom: -0.5em;
     transform-origin: center;
     pointer-events: none;
     z-index: 0;
+    width: 100%;
+    height: auto;
+    transform: translateX(0) scale(var(--mobile-doodle-scale, var(--doodle-scale)));
+}
+
+@media (min-width: 768px) {
+    .underline-doodle {
+        font-size: var(--desktop-font-size, inherit);
+    }
+
+    .doodle {
+        transform: translateX(0) scale(var(--doodle-scale));
+    }
 }
 </style>

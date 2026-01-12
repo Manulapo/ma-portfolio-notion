@@ -1,9 +1,9 @@
 <template>
     <Section id="certifications" contained :section-name="['my', 'Certifications']"
         section-desc="Lorem ipsum dolor sit amet dolor sit" section-doodle="/doodles/diamond-doodle.svg"
-        section-color="peach" doodle-size="w-20 h-20">
+        section-color="peach" doodle-size="w-12 h-12 md:w-20 md:h-20 ">
         <div class="max-w-6xl mx-auto">
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+            <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
                 <CertificationCard v-for="(c, i) in certifications" :key="i" :name="c.name" :description="c.description"
                     :image="c.image" :date="c.date" :link="c.link" :issuedBy="c.issuedBy" />
             </div>

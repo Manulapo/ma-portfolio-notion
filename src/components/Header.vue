@@ -18,6 +18,11 @@ const props = defineProps({
         default: '',
         validator: (v: string) => v === '' || ['s', 'm', 'l', 'xl'].includes(v)
     },
+    mobileSize: {
+        type: String,
+        default: '',
+        validator: (v: string) => v === '' || ['s', 'm', 'l', 'xl'].includes(v)
+    },
     random: {
         type: Boolean,
         default: false
@@ -40,6 +45,13 @@ const sizeMap: Record<string, string> = {
     xl: '5rem'
 }
 
+const mobileSizeMap: Record<string, string> = {
+    s: '0.85rem',
+    m: '1.25rem',
+    l: '2rem',
+    xl: '2.5rem'
+}
+
 const color = computed(() => {
     if (props.random) {
         const colors = Object.values(colorMap)
@@ -48,10 +60,12 @@ const color = computed(() => {
     return colorMap[props.highlighted] || 'transparent'
 })
 const sizeValue = computed(() => (props.size ? sizeMap[props.size] : undefined))
+const mobileSizeValue = computed(() => (props.mobileSize ? mobileSizeMap[props.mobileSize] : undefined))
 
 const styleObject = computed(() => {
     const base: Record<string, string> = { '--highlight': color.value || 'transparent' }
-    if (sizeValue.value) base.fontSize = sizeValue.value
+    if (mobileSizeValue.value) base['--mobile-font-size'] = mobileSizeValue.value
+    if (sizeValue.value) base['--desktop-font-size'] = sizeValue.value
     return base
 })
 </script>
@@ -61,16 +75,17 @@ const styleObject = computed(() => {
     position: relative;
     display: inline-block;
     z-index: 1;
-    padding: 0.2rem 0.6rem;
+    padding: 0.15rem 0.4rem;
     border-radius: 0.25rem;
     white-space: nowrap;
+    font-size: var(--mobile-font-size, inherit);
 }
 
 .header::after {
     content: '';
     position: absolute;
-    top: 5px;
-    left: 15px;
+    top: 3px;
+    left: 8px;
     width: 100%;
     height: 70%;
     background: var(--highlight);
@@ -79,9 +94,26 @@ const styleObject = computed(() => {
     transform: rotate(-1deg);
 }
 
+@media (min-width: 640px) {
+    .header {
+        padding: 0.2rem 0.6rem;
+    }
+
+    .header::after {
+        top: 4px;
+        left: 10px;
+    }
+}
+
 @media (min-width: 768px) {
     .header {
         padding: 0.3rem 1rem;
+        font-size: var(--desktop-font-size, inherit);
+    }
+
+    .header::after {
+        top: 5px;
+        left: 15px;
     }
 }
 </style>
