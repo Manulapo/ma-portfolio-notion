@@ -46,9 +46,9 @@
                 </div>
             </div>
 
-            <div class="w-full flex justify-center mt-16">
-                <i class="fas fa-chevron-down text-4xl cursor-pointer" />
-            </div>
+            <a href="#about" class="w-full flex justify-center mt-16">
+                <img src="/doodles/arrow-down-doodle.svg" alt="scroll down" class="w-16 animate-bounce" />
+            </a>
         </div>
     </Section>
 </template>
