@@ -4,6 +4,8 @@ import denmarkFlag from "/icons/DK.png";
 const SITE_BASE = (import.meta.env.VITE_SITE_BASE || '/')
 const basePrefix = SITE_BASE === '/' ? '' : SITE_BASE.replace(/\/$/, '')
 
+const legoProjectPdf = `${window.location.origin}${basePrefix}/files/PDF/LEGOTrendANALYSIS.pdf`;
+const legoProjectSQL = `${window.location.origin}${basePrefix}/files/sql/Lego_set_analysis.sql`;
 const resumePDF = `${window.location.origin}${basePrefix}/files/PDF/resumee/Chiara_Coletta_resumee.pdf`;
 const dataAnalyticsPDF = `${window.location.origin}${basePrefix}/files/PDF/certifications/Coursera Data Analytics certification.pdf`;
 const pythonCertificationPDF = `${window.location.origin}${basePrefix}/files/PDF/certifications/Coursera_PythonCertification.pdf`;
@@ -32,6 +34,8 @@ export const links = {
   pythonDataAnalyticsMavenPDF,
   hubSpotSocialMediaReady,
   PythonPandasCertificationMavenPDF,
+  legoProjectPdf,
+  legoProjectSQL,
   avatar,
   linkedin: "https://www.linkedin.com/in/chiara-coletta/",
   website: "https://www.chiara-coletta.space",

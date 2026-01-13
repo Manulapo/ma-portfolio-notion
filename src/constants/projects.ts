@@ -1,11 +1,10 @@
 import { attachmentSIcon } from ".";
 import project1Preview from "/images/p1/Project1_preview.jpg";
 import project2Preview from "/images/p2/Project2_preview.jpg";
+import { links } from "./links";
 
 const { pdf, tableauDS, mySql } = attachmentSIcon;
 
-const legoProjectPdf = `/files/PDF/LEGOTrendANALYSIS.pdf`;
-const legoProjectSQL = `/files/sql/Lego_set_analysis.sql`;
 
 export const project1 = {
   title: "Office Supplies Analysis",
@@ -47,11 +46,11 @@ export const project2 = {
     },
     {
       type: { ...pdf, name: "Download Deck" },
-      link: legoProjectPdf,
+      link: links.legoProjectPdf,
     },
     {
       type: { ...mySql, name: "mySQL queryies" },
-      link: legoProjectSQL
+      link: links.legoProjectSQL
     }
   ],
   highlights: [
