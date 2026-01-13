@@ -1,19 +1,19 @@
 import linkedinIcon from "/icons/linkedin.png";
 import denmarkFlag from "/icons/DK.png";
 
-const resumePDF = `/files/PDF/resumee/Chiara_Coletta_resumee.pdf`;
-const dataAnalyticsPDF = `/files/PDF/certifications/Coursera Data Analytics certification.pdf`;
-const pythonCertificationPDF = `/files/PDF/certifications/Coursera_PythonCertification.pdf`;
-const dataAnalysisSprSQLPDF = `/files/PDF/certifications/Data Analysis with Spreadsheets and SQL_certificate.pdf`;
-const dataAnalyticsMethodMrktPDF = `/files/PDF/certifications/Data Analytics Methods for Marketing.pdf`;
-const dataAnalyticsFoundationsPDF = `/files/PDF/certifications/Marketing Analytics Foundation.pdf`;
-const marketingAnalyticsPDF = `/files/PDF/certifications/Marketing Analytics with Meta Certification.pdf`;
-const marketingSciencePDF = `/files/PDF/certifications/Meta Marketing Science Certification Exam.pdf`;
-const statisticFoundationsPDF = `/files/PDF/certifications/Statistics Foundations.pdf`;
-const pythonDataAnalyticsMavenPDF = `/files/PDF/certifications/pythonDataAnalyticsMavenPDF.pdf`;
-const PythonPandasCertificationMavenPDF = `/files/PDF/certifications/PythonPandasCertification.pdf`
-const hubSpotSocialMediaReady = `/files/PDF/certifications/HubSpot_SocialMediaCertified.jpg`;
-const avatar = `/images/other/me.png`;
+const resumePDF = `${window.location.origin}/files/PDF/resumee/Chiara_Coletta_resumee.pdf`;
+const dataAnalyticsPDF = `${window.location.origin}/files/PDF/certifications/Coursera Data Analytics certification.pdf`;
+const pythonCertificationPDF = `${window.location.origin}/files/PDF/certifications/Coursera_PythonCertification.pdf`;
+const dataAnalysisSprSQLPDF = `${window.location.origin}/files/PDF/certifications/Data Analysis with Spreadsheets and SQL_certificate.pdf`;
+const dataAnalyticsMethodMrktPDF = `${window.location.origin}/files/PDF/certifications/Data Analytics Methods for Marketing.pdf`;
+const dataAnalyticsFoundationsPDF = `${window.location.origin}/files/PDF/certifications/Marketing Analytics Foundation.pdf`;
+const marketingAnalyticsPDF = `${window.location.origin}/files/PDF/certifications/Marketing Analytics with Meta Certification.pdf`;
+const marketingSciencePDF = `${window.location.origin}/files/PDF/certifications/Meta Marketing Science Certification Exam.pdf`;
+const statisticFoundationsPDF = `${window.location.origin}/files/PDF/certifications/Statistics Foundations.pdf`;
+const pythonDataAnalyticsMavenPDF = `${window.location.origin}/files/PDF/certifications/pythonDataAnalyticsMavenPDF.pdf`;
+const PythonPandasCertificationMavenPDF = `${window.location.origin}/files/PDF/certifications/PythonPandasCertification.pdf`
+const hubSpotSocialMediaReady = `${window.location.origin}/files/PDF/certifications/HubSpot_SocialMediaCertified.jpg`;
+const avatar = `${window.location.origin}/images/other/me.png`;
 
 
 export const links = {
