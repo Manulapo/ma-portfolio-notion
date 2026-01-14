@@ -2,8 +2,8 @@
     <nav class="fixed inset-x-0 top-3 sm:top-4 md:top-12 flex justify-center z-50 pointer-events-auto">
         <div
             class="w-full max-w-278.5 mx-2 sm:mx-3 md:mx-5 bg-black/90 md:bg-black/75 backdrop-blur-sm rounded-full md:rounded-[40px] px-6 sm:px-4 md:px-10 py-3 sm:py-4 md:py-5 shadow-xl flex items-center gap-2 sm:gap-3 md:gap-4 hover:bg-black/80 transition ease-in-out">
-            <a href="#" class="flex items-center flex-none" aria-label="home">
-                <img src="/images/logo.png" alt="logo" class="w-12 sm:w-16 md:w-20 h-auto block" />
+            <a href="/" class="flex items-center flex-none" aria-label="home">
+                <img src="/images/logo.png" alt="logo" class="w-16 sm:w-16 md:w-20 h-auto block" />
             </a>
 
             <ul class="hidden md:flex flex-1 justify-center gap-4 lg:gap-6 list-none m-0 p-0">
@@ -24,11 +24,11 @@
                     aria-label="linkedin" :href="links.linkedin" target="_blank" rel="noopener">
                     <i class="fa-brands fa-linkedin text-base sm:text-lg md:text-xl" aria-hidden="true"></i>
                 </a>
-
+                <!-- 
                 <button class="text-white p-1.5 sm:p-2 rounded-md hover:bg-white/10 cursor-pointer" aria-label="theme"
                     @click="toggleTheme" :aria-pressed="isDark">
                     <i :class="isDark ? 'fa-solid fa-moon' : 'fa-solid fa-sun'" aria-hidden="true"></i>
-                </button>
+                </button> -->
 
                 <!-- mobile menu button -->
                 <button class="md:hidden text-white p-1.5 sm:p-2 rounded-md hover:bg-white/10" aria-label="menu"

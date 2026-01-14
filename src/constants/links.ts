@@ -1,6 +1,3 @@
-import linkedinIcon from "/icons/linkedin.png";
-import denmarkFlag from "/icons/DK.png";
-
 const SITE_BASE = (import.meta.env.VITE_SITE_BASE || '/')
 const basePrefix = SITE_BASE === '/' ? '' : SITE_BASE.replace(/\/$/, '')
 
@@ -18,7 +15,9 @@ const statisticFoundationsPDF = `${window.location.origin}${basePrefix}/files/PD
 const pythonDataAnalyticsMavenPDF = `${window.location.origin}${basePrefix}/files/PDF/certifications/pythonDataAnalyticsMavenPDF.pdf`;
 const PythonPandasCertificationMavenPDF = `${window.location.origin}${basePrefix}/files/PDF/certifications/PythonPandasCertification.pdf`
 const hubSpotSocialMediaReady = `${window.location.origin}${basePrefix}/files/PDF/certifications/HubSpot_SocialMediaCertified.jpg`;
+const hubSpotDigitalMarketing = `${window.location.origin}${basePrefix}/files/PDF/certifications/HubSpot_DigitalMarketingCertified.jpeg`;
 const avatar = `${window.location.origin}${basePrefix}/images/other/me.png`;
+const denmarkFlag = `${window.location.origin}${basePrefix}/icons/DK.png`;
 
 
 export const links = {
@@ -33,6 +32,7 @@ export const links = {
   statisticFoundationsPDF,
   pythonDataAnalyticsMavenPDF,
   hubSpotSocialMediaReady,
+  hubSpotDigitalMarketing,
   PythonPandasCertificationMavenPDF,
   legoProjectPdf,
   legoProjectSQL,
@@ -46,6 +46,5 @@ export const links = {
 
 export const images = {
   avatar,
-  linkedinIcon,
   denmarkFlag,
 }

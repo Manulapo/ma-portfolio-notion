@@ -20,7 +20,7 @@
 
                     <div
                         class="flex items-center justify-center md:justify-start gap-2 sm:gap-3 md:gap-4 flex-wrap mt-16">
-                        <a :href="links.resumePDF" download
+                        <a :href="links.resumePDF"
                             class="inline-flex items-center gap-2 sm:gap-3 bg-black/90 backdrop-blur-sm text-white px-4 sm:px-8 md:px-16 md:py-4 text-sm sm:text-base rounded-full shadow-md transition ease-in-out w-[90%] py-4 sm:py-2 sm:w-auto justify-center">
                             <i class="fa-solid fa-file-download" aria-hidden="true"></i>
                             <span class="hidden sm:inline">My Resume</span>

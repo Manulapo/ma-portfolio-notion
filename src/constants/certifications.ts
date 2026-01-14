@@ -6,6 +6,14 @@ import { links } from "./links";
 
 export const certifications = [
   {
+    name: "Digital Marketing Certified",
+    description: "Comprehensive digital marketing strategies including SEO, content marketing, social media, email marketing and AI.",
+    image: hubspotLogo,
+    issuedBy: "HubSpot Academy",
+    link: links.hubSpotDigitalMarketing,
+    date: "Jan, 2026",
+  },
+  {
     name: "Data Analysis with Python and Pandas",
     description: "Hands-on course teaching NumPy and Pandas for data manipulation, analysis, and visualization.",
     image: mavenLogo,
