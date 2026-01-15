@@ -13,7 +13,7 @@
                     <div class="text-sm text-gray-300 mt-1">
                         Let's <a :href="links.linkedin">connect</a>
                     </div>
-                    <div class="text-xs text-gray-400 mt-2">©{{ new Date().getFullYear() }} Chiara Coletta all rights.
+                    <div class="text-xs text-gray-400 mt-2">©{{ new Date().getFullYear() }} Chiara Coletta all rights
                         reserved</div>
                     <div class="text-xs text-gray-600 mt-2">Website Designed by <a
                             href="https://manuel-la-porta.me/#/">La
