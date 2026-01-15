@@ -1,16 +1,21 @@
-# Vue 3 + TypeScript + Tailwind CSS + Font Awesome
+# Chiara Coletta - Portfolio
 
-A production-ready scaffold for Vue 3 projects with TypeScript, Tailwind CSS v4, Font Awesome icons, and GitHub Pages deployment.
+A personal portfolio website showcasing skills, projects, and certifications. Built with Vue 3, TypeScript, and Tailwind CSS.
+
+🌐 **Live Site**: [https://chiara-coletta.space/](https://chiara-coletta.space/)
 
 ## 🚀 Features
 
 - ✅ Vue 3 with Composition API
 - ✅ TypeScript for type safety
-- ✅ Tailwind CSS v4 (latest version)
+- ✅ Tailwind CSS v4
 - ✅ Font Awesome icons (Solid, Regular, Brands)
-- ✅ Vue Router for navigation
-- ✅ Vite for fast development and optimized builds
-- ✅ GitHub Pages deployment ready
+- ✅ Vue Router with SPA navigation
+- ✅ Responsive design
+- ✅ Dark/Light theme support
+- ✅ Project showcase with modal views
+- ✅ Skills and certifications display
+- ✅ Custom domain deployment
 
 ## 📦 Installation
 
@@ -44,70 +49,56 @@ Preview the production build locally:
 npm run preview
 ```
 
-## 🌐 Deploy to GitHub Pages
+## 🌐 Deployment
 
-### First-time Setup
+This portfolio is deployed at [chiara-coletta.space](https://chiara-coletta.space/) using GitHub Pages with a custom domain.
 
-1. **Update the repository name** in two files:
+### Deploy Updates
 
-   **`.env.production`**:
-   ```
-   VITE_SITE_BASE='/your-repo-name'
-   ```
+To deploy changes:
 
-   **`src/assets/404.html`** (line 12):
-   ```javascript
-   window.location.href = 'https://your-username.github.io/your-repo-name/?path=' + pathname
-   ```
-
-2. **Push your code to GitHub**:
-   ```bash
-   git add .
-   git commit -m "Initial commit"
-   git push origin main
-   ```
-
-3. **Deploy**:
-   ```bash
-   npm run deploy
-   ```
-
-4. **Enable GitHub Pages**:
-   - Go to your repository Settings → Pages
-   - Under "Build and deployment":
-     - Source: Deploy from a branch
-     - Branch: `gh-pages` / `(root)`
-   - Click Save
-
-5. Wait 1-2 minutes, then visit:
-   ```
-   https://your-username.github.io/your-repo-name/
-   ```
-
-### Subsequent Deployments
-
-Just run:
 ```bash
 npm run deploy
 ```
 
-Wait 1-2 minutes for GitHub Pages to update.
+The site will be updated in 1-2 minutes.
+
+### Custom Domain Setup
+
+The site uses a custom domain configured through:
+1. DNS settings pointing to GitHub Pages
+2. Base path set to `/` in `.env.production`
+3. GitHub Pages configured to serve from `gh-pages` branch
+
+For detailed deployment instructions, see [DEPLOYMENT.md](DEPLOYMENT.md).
 
 ## 📂 Project Structure
 
 ```
-├── public/          # Static assets
+├── public/              # Static assets
+│   ├── doodles/         # Decorative graphics
+│   ├── files/           # PDFs (certifications, resume) and SQL files
+│   ├── icons/           # Icon assets
+│   ├── images/          # Project and other images
+│   └── stickers/        # Sticker graphics
 ├── src/
-│   ├── assets/      # Images, fonts, 404.html
-│   ├── components/  # Vue components
-│   ├── router/      # Vue Router configuration
-│   ├── views/       # Page components
-│   ├── App.vue      # Root component
-│   ├── main.ts      # Application entry point
-│   └── style.css    # Global styles (Tailwind directives)
-├── .env.production  # Production environment variables
-├── index.html       # HTML entry point
-└── vite.config.ts   # Vite configuration
+│   ├── assets/          # 404.html for SPA routing
+│   ├── components/      # Reusable Vue components
+│   │   ├── Hero.vue
+│   │   ├── Skills.vue
+│   │   ├── ProjectCard.vue
+│   │   ├── Certifications.vue
+│   │   └── ...
+│   ├── composables/     # Vue composables (theme, utils)
+│   ├── constants/       # Project data, skills, certifications
+│   ├── router/          # Vue Router configuration
+│   ├── views/           # Page components (Home, About, Projects, 404)
+│   ├── App.vue          # Root component
+│   ├── main.ts          # Application entry point
+│   └── style.css        # Global styles
+├── .env.production      # Production environment variables
+├── DEPLOYMENT.md        # Deployment guide
+└── vite.config.ts       # Vite configuration
 ```
 
 ## 🎨 Using Tailwind CSS
@@ -146,28 +137,24 @@ library.add(faHeart)
 
 ## 🔄 Using as a Scaffold
 
-### Option 1: Using degit (Fastest)
+This portfolio can be used as a template for your own projects:
+
+### Option 1: GitHub Fork
+1. Fork this repository
+2. Update content in `src/constants/` with your own data
+3. Replace assets in `public/` with your own
+4. Update `.env.production` for your deployment
+
+### Option 2: Clone & Customize
 ```bash
-npx degit your-username/ma-portfolio-notion my-new-project
-cd my-new-project
+git clone https://github.com/your-username/ma-portfolio-notion my-portfolio
+cd my-portfolio
 npm install
 npm run dev
 ```
 
-### Option 2: GitHub Template
-1. Go to repository Settings
-2. Check "Template repository"
-3. Use "Use this template" button for new projects
-
-### Option 3: Clone & Reset
-```powershell
-git clone https://github.com/your-username/ma-portfolio-notion my-new-project
-cd my-new-project
-Remove-Item -Recurse -Force .git
-git init
-npm install
-```
-
-## 📝 License
-
-MIT
+Then customize:
+- Project data in `src/constants/projects.ts`
+- Skills in `src/constants/skills.ts`
+- Certifications in `src/constants/certifications.ts`
+- Personal info in components
