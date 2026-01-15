@@ -1,13 +1,15 @@
 <template>
     <span class="underline-doodle" :style="styleObject">
         <slot />
-        <img src="/doodles/underline-doodle.svg" alt="underline"
-            :class="['doodle', 'sm:block', customClass, hideOnMobile ? 'hidden' : '']" aria-hidden="true" />
+        <img :src="imageSrc" alt="underline" :class="['doodle', 'sm:block', customClass, hideOnMobile ? 'hidden' : '']"
+            aria-hidden="true" />
     </span>
 </template>
 
 <script setup lang="ts">
 import { computed } from 'vue'
+import { useImageSrc } from '../composables/useImageSrc'
+
 
 const props = defineProps({
     size: {
@@ -30,6 +32,8 @@ const props = defineProps({
         default: false
     }
 })
+
+const imageSrc = useImageSrc('/doodles/underline-doodle.svg')
 
 const sizeMap: Record<string, string> = {
     s: '0.9rem',
