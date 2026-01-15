@@ -11,9 +11,8 @@
                         :class="['inline-block', doodleSize ? doodleSize : 'w-8 sm:w-10 md:w-12 h-8 sm:h-10 md:h-12', 'align-middle', 'z-10', 'absolute', '-right-12 sm:-right-14 md:-right-15']" />
                 </h2>
             </header>
-            <p class="text-gray-600 italic mb-6 sm:mb-9 md:mb-12 max-w-3xl text-sm sm:text-base">
-                {{ sectionDesc }}
-            </p>
+            <p class="text-gray-600 italic mb-6 sm:mb-9 md:mb-12 max-w-[90%] text-sm sm:text-base"
+                v-html="sectionDesc" />
             <slot />
         </div>
         <slot v-else />
@@ -49,8 +48,7 @@ const resolveDoodle = (p?: string) => {
 
 <style scoped>
 .ma-section {
-    padding: 4rem 1rem;
-    /* Ensure anchored sections sit below the fixed navbar when using native scrolling */
+    padding: 3rem 1rem;
     scroll-margin-top: 5rem;
 }
 

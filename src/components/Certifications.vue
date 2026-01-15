@@ -1,7 +1,7 @@
 <template>
     <Section id="certifications" contained :section-name="['my', 'Certifications']"
-        section-desc="Lorem ipsum dolor sit amet dolor sit" section-doodle="/doodles/diamond-doodle.svg"
-        section-color="peach" doodle-size="w-12 h-12 md:w-20 md:h-20 ">
+        section-desc="<b>Continuous learning</b> plays a central role in my professional growth. Through structured courses and certifications, I strengthen my technical foundation, expand my strategic perspective, and stay curious about new tools and approaches in marketing and data analytics."
+        section-doodle="/doodles/diamond-doodle.svg" section-color="peach" doodle-size="w-12 h-12 md:w-20 md:h-20 ">
         <div class="max-w-6xl mx-auto">
             <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
                 <CertificationCard v-for="(c, i) in displayedCertifications" :key="i" :name="c.name"

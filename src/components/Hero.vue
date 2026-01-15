@@ -2,7 +2,9 @@
     <Section :contained="false" custom-class="mt-8 md:mt-16">
         <div class="container mx-auto pt-16 md:pt-32 px-4 sm:px-6 md:px-8 lg:px-16 w-full md:w-7xl">
             <div class="flex flex-col-reverse md:flex-row items-center gap-6 md:gap-8">
-                <div class="w-full md:w-[70%]">
+                <div class="w-full md:w-[70%] relative">
+                    <img src="/doodles/exaggeration-doodle.svg" alt="bulb"
+                        class="absolute left-10 sm:-left-15 -top-5 sm:-top-10 w-10 sm:w-18 -translate-x-6 -translate-y-6" />
                     <p class="text-center md:text-start text-xl sm:text-2xl md:text-4xl text-gray-700 mb-2">Hi, I'm
                         <span class="italic font-semibold">Chiara</span>, and
                         I'm a
@@ -51,7 +53,7 @@
                 </div>
             </div>
 
-            <a href="#about" class="w-full flex justify-center mt-8 md:mt-16">
+            <a href="#about" class="w-full flex justify-center mt-8 pt-14 md:mt-16">
                 <img src="/doodles/arrow-down-doodle.svg" alt="scroll down" class="w-10 md:w-16 animate-bounce" />
             </a>
         </div>

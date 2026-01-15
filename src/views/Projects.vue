@@ -1,6 +1,7 @@
 <template>
-    <Section id="projects" contained :section-name="['my', 'Projects']" section-desc="Lorem ipsum dolor sit amet dolor sit Lorem ipsum dolor sit amet dolor sit Lorem ipsum dolor sit amet
-            dolor sit Lorem ipsum dolor sit" section-color="pink">
+    <Section id="projects" contained :section-name="['my', 'Projects']"
+        section-desc="Driven by curiosity and a hands-on mindset, I approach projects as opportunities to learn by doing. Through self-initiated work and practical experimentation, I explore real-world marketing and data challenges, testing ideas and transforming insights into actionable outcomes."
+        section-color="pink">
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-1 sm:gap-2 mt-4 sm:mt-6 md:mt-8">
             <ProjectCard v-for="(p, i) in projects" :key="p.title || i" :project="p" @open="openProject" />
         </div>

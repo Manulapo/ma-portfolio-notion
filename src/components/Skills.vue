@@ -1,6 +1,6 @@
 <template>
     <Section id="skills" contained :section-name="['my', 'Skills']"
-        section-desc="Lorem ipsum dolor sit amet dolor sit Lorem ipsum dolor sit amet dolor sit Lorem ipsum dolor sit amet dolor sit Lorem ipsum dolor sit"
+        section-desc="Today, my focus is on developing a well-rounded <b>marketing analytics skill set</b> that combines data analysis, strategic thinking, and audience understanding. I work with analytical tools and platforms, explore marketing automation, and continuously deepen my knowledge in consumer behavior."
         section-doodle="/doodles/smile-doodle.svg" section-color="mint">
 
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4">

@@ -12,6 +12,7 @@ body {
     background-color: transparent;
     position: relative;
     z-index: 1;
+    overflow-x: hidden !important;
 }
 
 :root {
@@ -207,7 +208,7 @@ body::before {
 }
 
 /* Background colors for dark mode */
-.theme-dark .bg-gray-900 {
+.theme-dark .bg-black {
     background-color: var(--surface-elevated) !important;
     color: var(--text) !important;
 }

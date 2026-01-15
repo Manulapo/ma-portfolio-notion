@@ -1,8 +1,8 @@
 <template>
     <span class="underline-doodle" :style="styleObject">
         <slot />
-        <img src="/doodles/underline-doodle.svg" alt="underline" :class="['doodle', ...customClass]"
-            aria-hidden="true" />
+        <img src="/doodles/underline-doodle.svg" alt="underline"
+            :class="['doodle', 'sm:block', customClass, hideOnMobile ? 'hidden' : '']" aria-hidden="true" />
     </span>
 </template>
 
@@ -24,6 +24,10 @@ const props = defineProps({
         // allow either a string or array of classes
         type: [String, Array],
         default: ''
+    },
+    hideOnMobile: {
+        type: [Boolean],
+        default: false
     }
 })
 
@@ -69,7 +73,6 @@ const styleObject = computed(() => {
 .doodle {
     position: absolute;
     left: 0;
-    bottom: -0.5em;
     transform-origin: center;
     pointer-events: none;
     z-index: 0;

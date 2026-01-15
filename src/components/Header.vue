@@ -31,7 +31,7 @@ const props = defineProps({
 
 const colorMap: Record<string, string> = {
     pink: '#FFB3BA',
-    peach: '#FFDFBA',
+    peach: '#ffcc96',
     yellow: '#FEF9B0',
     mint: '#BAFFC9',
     blue: '#C6E6FF',
@@ -92,7 +92,6 @@ const styleObject = computed(() => {
     border-radius: inherit;
     z-index: -1;
     transform: rotate(-1deg);
-    opacity: .8;
 }
 
 @media (min-width: 640px) {
