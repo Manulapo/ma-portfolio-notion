@@ -4,7 +4,7 @@ import { viteStaticCopy } from 'vite-plugin-static-copy'
 
 // https://vite.dev/config/
 export default defineConfig(({ command }) => {
-  const prodBase = '/ma-portfolio-notion/'
+  const prodBase = '/'
   const base = command === 'build' ? prodBase : '/'
 
   return {
