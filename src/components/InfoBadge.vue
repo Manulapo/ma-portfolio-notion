@@ -4,7 +4,7 @@
             <div
                 class="w-12 h-12 sm:w-10 sm:h-10 bg-white/10 rounded-full overflow-hidden flex items-center justify-center">
                 <template v-if="image">
-                    <img :src="image" :alt="title" class="w-full h-full object-cover" />
+                    <img :src="imageSrc" :alt="title" class="w-full h-full object-cover" />
                 </template>
                 <template v-else>
                     <i :class="icon" aria-hidden="true" class="text-lg sm:text-xl md:text-2xl"></i>
@@ -20,10 +20,14 @@
 </template>
 
 <script setup lang="ts">
+import { useImageSrc } from '../composables/useImageSrc'
+
 const props = defineProps({
     title: { type: String, required: true },
     subtitle: { type: String, default: '' },
     icon: { type: String, default: '' },
     image: { type: String, default: '' }
 })
+
+const imageSrc = useImageSrc(props.image)
 </script>

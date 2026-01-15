@@ -69,10 +69,9 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { useTheme } from '../composables/useTheme'
 import { links } from '../constants/links';
 
-const { isDark, toggleTheme } = useTheme()
+// const { isDark, toggleTheme } = useTheme()
 const mobileOpen = ref(false)
 </script>
 
