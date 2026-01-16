@@ -11,7 +11,7 @@
                         :class="['inline-block', doodleSize ? doodleSize : 'w-8 sm:w-10 md:w-12 h-8 sm:h-10 md:h-12', 'align-middle', 'z-10', 'absolute', '-right-12 sm:-right-14 md:-right-15']" />
                 </h2>
             </header>
-            <p class="text-gray-600 italic mb-6 sm:mb-9 md:mb-12 max-w-[90%] text-sm sm:text-base"
+            <p class="text-gray-600 mb-6 sm:mb-9 md:mb-12 max-w-full sm:max-w-[90%] text-sm sm:text-base"
                 v-html="sectionDesc" />
             <slot />
         </div>

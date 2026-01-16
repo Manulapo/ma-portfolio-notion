@@ -11,7 +11,8 @@
             <div class="flex justify-center mt-6 md:hidden">
                 <button v-if="displayedCertifications.length < certifications.length" @click="loadMore"
                     class="inline-flex items-center gap-2 sm:gap-3 bg-black/90 backdrop-blur-sm text-white text-sm sm:text-base rounded-full shadow-md transition ease-in-out w-fit px-4 py-2 sm:py-2 sm:w-auto justify-center">
-                    Load More
+                    More
+                    <i class="fa-solid fa-arrow-rotate-right"></i>
                 </button>
             </div>
         </div>

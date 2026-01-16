@@ -16,7 +16,7 @@
 
                     <p class="text-center md:text-start text-lg sm:text-2xl md:text-4xl mb-4">aiming to understand
                         <Underline size="xl" mobile-size="l">
-                            <span class="italic font-bold">customers needs</span>
+                            <span class="italic font-bold">customers' needs</span>
                         </Underline>
                     </p>
 

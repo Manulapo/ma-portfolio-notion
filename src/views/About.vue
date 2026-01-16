@@ -22,7 +22,7 @@
                 </div>
 
                 <div class="flex flex-col gap-12 items-center ">
-                    <p class="md:flex-1 text-gray-600 italic text-sm sm:text-base">
+                    <p class="md:flex-1 text-gray-600 text-sm sm:text-base">
                         My background in <b>business consulting</b> taught me how to turn complex ideas into clear
                         strategies,
                         and now, in <b>marketing & digital analytics</b>, I get to do the same through numbers and
@@ -53,7 +53,7 @@
 
                     </div>
 
-                    <p class="md:flex-1 text-gray-600 italic text-sm sm:text-base">
+                    <p class="md:flex-1 text-gray-600 text-sm sm:text-base">
                         Originally from <b>Italy</b> and now based in <b>Copenhagen</b>, I specialize in combining
                         <Underline custom-class="absolute" class="font-bold" :hide-on-mobile="true">
                             data analysis and

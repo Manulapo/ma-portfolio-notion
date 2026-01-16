@@ -21,7 +21,7 @@
                 </div>
 
                 <nav class="flex-1 flex items-center justify-center gap-4 h-full">
-                    <a href="#about" class="text-sm text-gray-200 hover:underline">About</a>
+                    <a :href="links.vizzy" class="text-sm text-gray-200 hover:underline">Vizzy</a>
                     <span class="text-gray-600">·</span>
                     <a href="https://www.femella.org/" class="text-sm text-gray-200 hover:underline">femella</a>
                     <span class="text-gray-600">·</span>
