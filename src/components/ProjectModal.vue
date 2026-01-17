@@ -98,7 +98,7 @@
                             <aside class="col-span-2 self-start h-auto max-h-[70vh] overflow-auto">
                                 <div class="flex flex-col gap-2 sm:gap-3">
                                     <div class="p-2 sm:p-3 md:p-4 bg-[#fafafa] rounded mt-0 md:mt-8">
-                                        <Underline custom-class="bottom-10">
+                                        <Underline>
                                             <h4 class="font-semibold text-md sm:text-sm text-gray-700">Tools used</h4>
                                         </Underline>
                                         <ul
