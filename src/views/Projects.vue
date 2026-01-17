@@ -11,6 +11,7 @@
 </template>
 
 <script setup lang="ts">
+import { useHead } from '@vueuse/head'
 import Section from '../components/Section.vue';
 import ProjectCard from '../components/ProjectCard.vue';
 import ProjectModal from '../components/ProjectModal.vue';
@@ -24,4 +25,22 @@ function openProject(p: any) {
     selectedProject.value = p
     modalOpen.value = true
 }
+
+useHead({
+  title: 'Projects | Chiara Coletta',
+  meta: [
+    {
+      name: 'description',
+      content: 'Explore my portfolio of marketing analytics, data visualization, and business intelligence projects.'
+    },
+    {
+      property: 'og:title',
+      content: 'Projects | Chiara Coletta'
+    },
+    {
+      property: 'og:description',
+      content: 'Portfolio of marketing analytics and data-driven projects'
+    }
+  ]
+})
 </script>

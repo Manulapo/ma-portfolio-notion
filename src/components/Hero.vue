@@ -35,7 +35,7 @@
 
                         <a class="hidden sm:inline-flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12 text-black rounded-md cursor-pointer"
                             aria-label="vizzy" :href="links.vizzy" target="_blank" rel="noopener">
-                            <img class="w-5 sm:w-6" src="/icons/vizzy-icon.png" alt="">
+                            <img class="w-5 sm:w-6" src="/icons/vizzy-icon.png" alt="Vizzy profile">
                         </a>
                     </div>
 

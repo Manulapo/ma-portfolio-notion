@@ -1,3 +1,33 @@
+<script setup lang="ts">
+import { useHead } from '@vueuse/head'
+import Section from '../components/Section.vue'
+import InfoBadge from '../components/InfoBadge.vue'
+import NumbersBox from '../components/NumbersBox.vue'
+import { certifications, projects, links } from '../constants'
+
+function getYears(startYear: number): number {
+    return new Date().getFullYear() - startYear
+}
+
+useHead({
+  title: 'About | Chiara Coletta',
+  meta: [
+    {
+      name: 'description',
+      content: 'Learn more about Chiara Coletta - marketing-driven problem solver with a passion for data, creativity, and consumer insights.'
+    },
+    {
+      property: 'og:title',
+      content: 'About | Chiara Coletta'
+    },
+    {
+      property: 'og:description',
+      content: 'Marketing analyst with international experience in Milan and Luxembourg, specializing in data-driven marketing strategies.'
+    }
+  ]
+})
+</script>
+
 <template>
     <Section id="about" contained :section-name="['about', 'Me']"
         section-desc="I’m a <b>marketing-driven problem solver</b> with a passion for blending <b>data, creativity, and curiosity</b> to help brands grow with purpose. My name is Chiara, and I focus on developing smarter, more intuitive marketing strategies—whether that’s optimizing processes, analyzing consumer responses to campaigns, or uncovering data-driven insights that reveal meaningful brand stories."

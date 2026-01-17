@@ -9,4 +9,19 @@
 </template>
 
 <script setup lang="ts">
+import { useHead } from '@vueuse/head'
+
+useHead({
+  title: '404 - Page Not Found | Chiara Coletta',
+  meta: [
+    {
+      name: 'description',
+      content: 'Page not found. Return to Chiara Coletta\'s portfolio.'
+    },
+    {
+      name: 'robots',
+      content: 'noindex, nofollow'
+    }
+  ]
+})
 </script>

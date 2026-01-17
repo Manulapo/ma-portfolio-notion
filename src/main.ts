@@ -1,4 +1,5 @@
 import { createApp } from 'vue'
+import { createHead } from '@vueuse/head'
 import './style.css'
 import App from './App.vue'
 import router from './router'
@@ -16,11 +17,13 @@ import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
 library.add(faUserSecret)
 
 const app = createApp(App)
+const head = createHead()
 
 /* add font awesome icon component */
 app.component('font-awesome-icon', FontAwesomeIcon)
 
 /* add router */
 app.use(router)
+app.use(head)
 
 app.mount('#app')
