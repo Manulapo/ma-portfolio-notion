@@ -1,13 +1,12 @@
 <script setup lang="ts">
 import { useHead } from '@vueuse/head'
-import Section from '../components/Section.vue'
 import InfoBadge from '../components/InfoBadge.vue'
 import NumbersBox from '../components/NumbersBox.vue'
-import { certifications, projects, links } from '../constants'
-
-function getYears(startYear: number): number {
-    return new Date().getFullYear() - startYear
-}
+import Section from '../components/Section.vue'
+import Underline from '../components/Underline.vue'
+import { getYears } from '../composables/utils'
+import { certifications } from '../constants/certifications'
+import { projects } from '../constants/projects'
 
 useHead({
     title: 'About | Chiara Coletta',
@@ -103,13 +102,3 @@ useHead({
     </Section>
 
 </template>
-
-<script setup lang="ts">
-import InfoBadge from '../components/InfoBadge.vue'
-import NumbersBox from '../components/NumbersBox.vue'
-import Section from '../components/Section.vue'
-import Underline from '../components/Underline.vue';
-import { getYears } from '../composables/utils';
-import { certifications } from '../constants/certifications';
-import { projects } from '../constants/projects';
-</script>
