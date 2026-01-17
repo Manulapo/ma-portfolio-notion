@@ -5,7 +5,7 @@
             <div
                 class="transition-opacity duration-200 ease-in-out group-hover:opacity-0 group-hover:invisible flex items-center flex-col gap-2 sm:gap-3 md:gap-4">
                 <div class="shrink-0">
-                    <img v-if="image" :src="image" alt="issuer"
+                    <img v-if="image" :src="image" alt="issuer" loading="lazy"
                         class="w-full h-6 sm:h-8 md:h-10 mb-2 sm:mb-3 md:mb-4" />
                     <div v-else class="w-8 sm:w-10 md:w-12 h-8 sm:h-10 md:h-12 rounded-full bg-gray-200"></div>
                 </div>

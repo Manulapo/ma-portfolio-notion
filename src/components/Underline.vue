@@ -2,7 +2,7 @@
     <span class="underline-doodle" :style="styleObject">
         <slot />
         <img :src="imageSrc" alt="underline" :class="['doodle', 'sm:block', customClass, hideOnMobile ? 'hidden' : '']"
-            aria-hidden="true" />
+            loading="lazy" aria-hidden="true" />
     </span>
 </template>
 

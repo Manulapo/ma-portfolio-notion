@@ -35,7 +35,7 @@ useHead({
         <div class="relative">
             <div class="max-w-5xl mx-auto">
                 <div class="relative py-6 sm:py-9 md:py-12">
-                    <img src="/doodles/shapes-doodle.svg" alt="shapes"
+                    <img src="/doodles/shapes-doodle.svg" alt="shapes" loading="lazy"
                         class="hidden md:block absolute -left-6 sm:-left-8 top-8 sm:top-10 w-14 sm:w-20 opacity-90" />
 
                     <InfoBadge title="Based in Denmark" subtitle="" image="/icons/DK.png"
@@ -47,7 +47,7 @@ useHead({
                         <NumbersBox :number="projects.length" text="Portfolio projects" />
                     </div>
 
-                    <img src="/doodles/squiggly-arrow-doodle.svg" alt="arrow"
+                    <img src="/doodles/squiggly-arrow-doodle.svg" alt="arrow" loading="lazy"
                         class="hidden md:block absolute -right-6 sm:-right-8 top-24 sm:top-36 w-14 sm:w-20 opacity-90" />
                 </div>
 
@@ -71,7 +71,7 @@ useHead({
                     </p>
 
                     <div class="flex flex-col md:flex-row items-start gap-0 sm:gap-12 mt-8 sm:mt-8 relative">
-                        <img src="/stickers/florence-2.png" alt="About Me Photo"
+                        <img src="/stickers/florence-2.png" alt="About Me Photo" loading="lazy"
                             class="order-2 md:order-1 md:w-130 shrink-0 flex-1 -rotate-3" />
                         <div
                             class="order-1 md:order-2 w-full md:w-[50%] flex flex-col justify-end items-end gap-2 sm:gap-3 md:gap-4">

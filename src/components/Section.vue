@@ -7,7 +7,7 @@
                     <Header :highlighted="sectionColor">
                         <span class="font-extrabold">{{ sectionName[1] }}</span>
                     </Header>
-                    <img v-if="sectionDoodle" :src="resolveDoodle(sectionDoodle)" alt="doodle"
+                    <img v-if="sectionDoodle" :src="resolveDoodle(sectionDoodle)" alt="doodle" loading="lazy"
                         :class="['inline-block', doodleSize ? doodleSize : 'w-8 sm:w-10 md:w-12 h-8 sm:h-10 md:h-12', 'align-middle', 'z-10', 'absolute', '-right-12 sm:-right-14 md:-right-15']" />
                 </h2>
             </header>
