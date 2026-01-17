@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { useHead } from '@vueuse/head'
 import InfoBadge from '../components/InfoBadge.vue'
 import NumbersBox from '../components/NumbersBox.vue'
 import Section from '../components/Section.vue'
@@ -7,24 +6,6 @@ import Underline from '../components/Underline.vue'
 import { getYears } from '../composables/utils'
 import { certifications } from '../constants/certifications'
 import { projects } from '../constants/projects'
-
-useHead({
-    title: 'About | Chiara Coletta',
-    meta: [
-        {
-            name: 'description',
-            content: 'Learn more about Chiara Coletta - marketing-driven problem solver with a passion for data, creativity, and consumer insights.'
-        },
-        {
-            property: 'og:title',
-            content: 'About | Chiara Coletta'
-        },
-        {
-            property: 'og:description',
-            content: 'Marketing analyst with international experience in Milan and Luxembourg, specializing in data-driven marketing strategies.'
-        }
-    ]
-})
 </script>
 
 <template>
