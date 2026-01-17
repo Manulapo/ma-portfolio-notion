@@ -27,20 +27,20 @@ function openProject(p: any) {
 }
 
 useHead({
-  title: 'Projects | Chiara Coletta',
-  meta: [
-    {
-      name: 'description',
-      content: 'Explore my portfolio of marketing analytics, data visualization, and business intelligence projects.'
-    },
-    {
-      property: 'og:title',
-      content: 'Projects | Chiara Coletta'
-    },
-    {
-      property: 'og:description',
-      content: 'Portfolio of marketing analytics and data-driven projects'
-    }
-  ]
+    title: 'Projects | Chiara Coletta',
+    meta: [
+        {
+            name: 'description',
+            content: 'Explore my portfolio of marketing analytics, data visualization, and business intelligence projects.'
+        },
+        {
+            property: 'og:title',
+            content: 'Projects | Chiara Coletta'
+        },
+        {
+            property: 'og:description',
+            content: 'Portfolio of marketing analytics and data-driven projects'
+        }
+    ]
 })
 </script>

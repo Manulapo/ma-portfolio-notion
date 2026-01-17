@@ -10,21 +10,21 @@ function getYears(startYear: number): number {
 }
 
 useHead({
-  title: 'About | Chiara Coletta',
-  meta: [
-    {
-      name: 'description',
-      content: 'Learn more about Chiara Coletta - marketing-driven problem solver with a passion for data, creativity, and consumer insights.'
-    },
-    {
-      property: 'og:title',
-      content: 'About | Chiara Coletta'
-    },
-    {
-      property: 'og:description',
-      content: 'Marketing analyst with international experience in Milan and Luxembourg, specializing in data-driven marketing strategies.'
-    }
-  ]
+    title: 'About | Chiara Coletta',
+    meta: [
+        {
+            name: 'description',
+            content: 'Learn more about Chiara Coletta - marketing-driven problem solver with a passion for data, creativity, and consumer insights.'
+        },
+        {
+            property: 'og:title',
+            content: 'About | Chiara Coletta'
+        },
+        {
+            property: 'og:description',
+            content: 'Marketing analyst with international experience in Milan and Luxembourg, specializing in data-driven marketing strategies.'
+        }
+    ]
 })
 </script>
 
