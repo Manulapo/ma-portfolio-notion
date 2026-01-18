@@ -18,7 +18,7 @@
         <div class="mt-3 sm:mt-4 flex items-center justify-end">
             <button @click.stop="handleOpen" aria-label="Open project"
                 class="ml-1 text-gray-600 hover:text-black transition-all ease-in-out">
-                <i class="fas fa-arrow-right"></i>
+                <i class="fas fa-arrow-right cursor-pointer"></i>
             </button>
         </div>
     </article>

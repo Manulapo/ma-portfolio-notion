@@ -1,6 +1,6 @@
 <template>
     <a :href="attachment.link" target="_blank"
-        class="flex items-center px-2 py-1 rounded-md bg-black border-2 hover:shadow-lg transition-scale w-full hover:scale-101 ease-in-out">
+        class="flex items-center px-2 py-1 rounded-md bg-black/80 hover:bg-black transition-bg hover:shadow-lg ease-in-out">
         <div class="shrink-0 h-8 w-8 flex items-center justify-center mr-1">
             <img v-if="iconSrc" :src="iconSrc" alt="" loading="lazy" class="h-5 w-5 invert" />
             <span v-else class="text-sm text-white">{{ fallbackInitial }}</span>

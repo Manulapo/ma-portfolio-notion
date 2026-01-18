@@ -95,7 +95,7 @@
                             </main>
 
                             <!-- Right: narrow sidebar -->
-                            <aside class="col-span-2 self-start h-auto max-h-[70vh] overflow-auto">
+                            <aside class="col-span-2 self-start h-auto max-h-[70vh] overflow-hidden w-full">
                                 <div class="flex flex-col gap-2 sm:gap-3">
                                     <div class="p-2 sm:p-3 md:p-4 bg-[#fafafa] rounded mt-0 md:mt-8">
                                         <Underline>
@@ -108,6 +108,8 @@
                                             </li>
                                         </ul>
                                     </div>
+                                </div>
+                                <div class="flex flex-col gap-2 sm:gap-3">
                                     <div class="divider border-t border-gray-200"></div>
                                     <h4 class="font-semibold text-md sm:text-sm text-gray-700">Attachments </h4>
 
