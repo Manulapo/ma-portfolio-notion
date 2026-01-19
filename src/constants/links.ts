@@ -3,6 +3,8 @@ const basePrefix = SITE_BASE === '/' ? '' : SITE_BASE.replace(/\/$/, '')
 
 const legoProjectPdf = `${window.location.origin}${basePrefix}/files/PDF/LEGOTrendANALYSIS.pdf`;
 const legoProjectSQL = `${window.location.origin}${basePrefix}/files/sql/Lego_set_analysis.sql`;
+const ABTestingProjectPDF = `${window.location.origin}${basePrefix}/files/PDF/FuzzyFactoryABTesting.pdf`;
+const ABTestingProjectXLS = `${window.location.origin}${basePrefix}/files/PDF/xls/landing_page_ab_test.xlsx`;
 const resumePDF = `${window.location.origin}${basePrefix}/files/PDF/resumee/Chiara_Coletta_resumee.pdf`;
 const dataAnalyticsPDF = `${window.location.origin}${basePrefix}/files/PDF/certifications/Coursera Data Analytics certification.pdf`;
 const pythonCertificationPDF = `${window.location.origin}${basePrefix}/files/PDF/certifications/Coursera_PythonCertification.pdf`;
@@ -21,6 +23,8 @@ const denmarkFlag = `${window.location.origin}${basePrefix}/icons/DK.png`;
 
 
 export const links = {
+  ABTestingProjectPDF,
+  ABTestingProjectXLS,
   resumePDF,
   dataAnalyticsPDF,
   pythonCertificationPDF,

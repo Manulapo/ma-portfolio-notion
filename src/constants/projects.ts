@@ -1,9 +1,11 @@
 import { attachmentSIcon } from ".";
 import project1Preview from "/images/p1/Project1_preview.jpg";
 import project2Preview from "/images/p2/Project2_preview.jpg";
+import project3Preview from "/images/p3/Project3_preview.jpg";
+
 import { links } from "./links";
 
-const { pdf, tableauDS, mySql } = attachmentSIcon;
+const { pdf, tableauDS, mySql, excel } = attachmentSIcon;
 
 
 export const project1 = {
@@ -36,7 +38,7 @@ export const project2 = {
     "This end-to-end LEGO Analytics Project leverages the Maven Analytics LEGO dataset (1970–2022). Using SQL, Excel, Tableau Public, and PowerPoint I simulated a full-cycle analytics workflow — from data cleaning and transformation to interactive dashboards and executive storytelling.",
   credits: "Dataset: Maven Analytics LEGO sets (1970–2022). Tools: SQL, Excel, Tableau Public, PowerPoint.",
   previewImage: project2Preview,
-  tags: ["excel", "powePoint", "mySql", "tableau"],
+  tags: ["excel", "powerPoint", "mySql", "tableau"],
   relevantLink:
     "https://public.tableau.com/views/LegoProject_17472965432290/LEGOSetsOverview?:language=en-GB&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
   attachments: [
@@ -64,6 +66,36 @@ export const project2 = {
     { title: "Key Insight — Themes", text: "Early decades were dominated by Gear; Star Wars and Marvel emerged as leaders in later years.", icon: "fa-solid fa-layer-group" },
     { title: "Key Insight — Price/Piece", text: "Price-per-piece generally decreased over time, suggesting strategic pricing or improved value.", icon: "fa-solid fa-coins" },
   ],
+
 }
 
-export const projects = [project1, project2];
+export const project3 = {
+  title: "E-commerce A/B Test",
+  description:
+    "For Maven Fuzzy Factory, an e-commerce startup, I addressed a critical growth bottleneck: a 60% homepage bounce rate wasting paid search budget. I simulated an A/B test analysis (Home vs. Custom Lander) for 400k+ sessions. Using Excel Power Query for data cleaning and Z-Tests for statistical validation, I proved a significant performance uplift, leading to a recommendation for permanent adoption.",
+  credits: "Dataset: E-Commerce database (30k+ orders). Tools: Excel Power Query, Statistical Analysis (Z-Test).",
+  previewImage: project3Preview,
+  tags: ["excel", "poweQuery", "Google Analytics"],
+  relevantLink: links.ABTestingProjectPDF,
+  attachments: [
+    {
+      type: { ...pdf, name: "Download Deck" },
+      link: links.ABTestingProjectPDF,
+    },
+    {
+      type: { ...excel, name: "Raw Data & Calc" },
+      link: links.ABTestingProjectXLS,
+    }
+  ],
+  highlights: [
+    { title: "The Problem", text: "Paid search traffic was landing on the homepage with a high 60% bounce rate, wasting marketing spend.", icon: "fa-solid fa-triangle-exclamation" },
+    { title: "Data Cleaning", text: "Used Excel Power Query to filter over 400k sessions, isolating 'Non-Brand' Gsearch traffic for the experiment.", icon: "fa-solid fa-filter" },
+    { title: "The Experiment", text: "Compared performance between the original Homepage and a new Custom Landing Page (/lander-1).", icon: "fa-solid fa-flask" },
+    { title: "Key Result", text: "The new landing page reduced the bounce rate to 53.2% (vs. 58.3% on Home), a 5.1% absolute improvement.", icon: "fa-solid fa-arrow-trend-down" },
+    { title: "Significance", text: "Validated results using a Z-Test at 95% confidence, confirming the lift was statistically significant (not random noise).", icon: "fa-solid fa-calculator" },
+    { title: "Business Impact", text: "Recommended permanent adoption of the new page to maximize ROI on ad spend immediately.", icon: "fa-solid fa-check-double" },
+  ],
+};
+
+export const projects = [project3, project2, project1];
+
