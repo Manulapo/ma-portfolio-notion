@@ -142,11 +142,13 @@ function close() {
 
 const project = props.project || {}
 
-const highlightItems = project.highlights || Array.from({ length: 5 }, (_, i) => ({
-    title: `Detail ${i + 1}`,
-    text: project.highlights[0] || ``,
-    variant: 'half',
-}))
+const highlightItems = (project.highlights && project.highlights.length)
+    ? project.highlights
+    : Array.from({ length: 5 }, (_, i) => ({
+        title: `Detail ${i + 1}`,
+        text: project?.highlights?.[0]?.text || project?.description || ``,
+        variant: 'half',
+    }))
 
 function lockScroll() {
     const root = document.documentElement

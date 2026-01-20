@@ -7,7 +7,7 @@
         </div>
     </Section>
 
-    <ProjectModal v-if="modalOpen" :project="selectedProject" @close="modalOpen = false" />
+    <ProjectModal v-if="modalOpen" :project="selectedProject" @close="closeModal" />
 </template>
 
 <script setup lang="ts">
@@ -15,13 +15,22 @@ import { ref } from 'vue';
 import ProjectCard from '../components/ProjectCard.vue';
 import ProjectModal from '../components/ProjectModal.vue';
 import Section from '../components/Section.vue';
+import { useQueryParamProject } from '../composables/useQueryParamProject';
 import { projects } from '../constants/projects';
 
 const modalOpen = ref(false)
-const selectedProject = ref(null)
+const selectedProject = ref<any>(null)
+const { removeQueryParamProject, setQueryParamProject } = useQueryParamProject(selectedProject, modalOpen)
+
+function closeModal() {
+    selectedProject.value = null,
+        modalOpen.value = false,
+        removeQueryParamProject()
+}
 
 function openProject(p: any) {
     selectedProject.value = p
-    modalOpen.value = true
+    const projectIndex = projects.findIndex(proj => proj.title === p.title)
+    setQueryParamProject(projectIndex)
 }
 </script>

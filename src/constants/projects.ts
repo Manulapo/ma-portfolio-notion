@@ -73,7 +73,7 @@ export const project3 = {
   title: "E-commerce A/B Test",
   description:
     "For Maven Fuzzy Factory, an e-commerce startup, I addressed a critical growth bottleneck: a 60% homepage bounce rate wasting paid search budget. I simulated an A/B test analysis (Home vs. Custom Lander) for 400k+ sessions. Using Excel Power Query for data cleaning and Z-Tests for statistical validation, I proved a significant performance uplift, leading to a recommendation for permanent adoption.",
-  credits: "Dataset: E-Commerce database (30k+ orders). Tools: Excel Power Query, Statistical Analysis (Z-Test).",
+  credits: "Dataset: Maven Analytics E-Commerce database (30k+ orders). Tools: Excel Power Query, Statistical Analysis (Z-Test).",
   previewImage: project3Preview,
   tags: ["excel", "poweQuery", "Google Analytics"],
   relevantLink: links.ABTestingProjectPDF,
