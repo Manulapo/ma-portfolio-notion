@@ -54,7 +54,7 @@ import { projects } from '../constants/projects'
                         <img src="/stickers/florence-2.png" alt="About Me Photo" loading="lazy"
                             class="order-2 md:order-1 md:w-130 shrink-0 flex-1 -rotate-3" />
                         <div
-                            class="order-1 md:order-2 w-full md:w-[50%] flex flex-col justify-end items-end gap-2 sm:gap-3 md:gap-4">
+                            class="order-1 md:order-2 w-50% md:w-[50%] flex flex-col justify-end items-end gap-2 sm:gap-3 md:gap-4">
                             <InfoBadge title="MSc in Corporate Governance & Management"
                                 subtitle="University of Florence" icon="fas fa-graduation-cap" />
                             <InfoBadge title="BSc in Business Administration" subtitle="University of Florence"
