@@ -87,7 +87,13 @@ import { projects } from '../constants/projects'
 <style scoped>
 .sticker {
     /* fallback */
-    width: 130px;
+    width: 350px;
     height: auto;
+}
+
+@media (min-width: 480px) {
+    .sticker {
+        width: 100%;
+    }
 }
 </style>
