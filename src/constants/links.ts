@@ -42,7 +42,7 @@ export const links = {
   legoProjectSQL,
   avatar,
   linkedin: "https://www.linkedin.com/in/chiara-coletta/",
-  website: "https://www.chiara-coletta.space",
+  website: "https://www.chiara-coletta.com",
   vizzy: "https://vizzy.com/@chiaracoletta98",
   github: "",
 };

@@ -2,7 +2,7 @@
 
 A personal portfolio website showcasing skills, projects, and certifications. Built with Vue 3, TypeScript, and Tailwind CSS.
 
-🌐 **Live Site**: [https://chiara-coletta.space/](https://chiara-coletta.space/)
+🌐 **Live Site**: [https://chiara-coletta.com/](https://chiara-coletta.com/)
 
 ## 🚀 Features
 
@@ -51,7 +51,7 @@ npm run preview
 
 ## 🌐 Deployment
 
-This portfolio is deployed at [chiara-coletta.space](https://chiara-coletta.space/) using GitHub Pages with a custom domain.
+This portfolio is deployed at [chiara-coletta.com](https://chiara-coletta.com/) using GitHub Pages with a custom domain.
 
 ### Deploy Updates
 
