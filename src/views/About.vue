@@ -91,7 +91,7 @@ import { projects } from '../constants/projects'
     height: auto;
 }
 
-@media (min-width: 480px) {
+@media (max-width: 480px) {
     .sticker {
         width: 100%;
     }
